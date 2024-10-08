@@ -1,14 +1,4 @@
 // Заголовки, загальні БЕМ блоки та інше...
-.page-subtitle {
-    font-size: toRem(20);
-    line-height: toRem(28);
-    font-weight: 400;
-
-    @media (max-width:$mobile){
-        font-size: toRem(16);
-        line-height: toRem(24);
-    }
-}
 
 .page-head {
     padding: toRem(140) 0 toRem(80);
@@ -30,65 +20,42 @@
 }
 
 .page-title {
+    background-color: $greenColor;
+    border-radius: toRem(7);
+    padding: 0 toRem(7);
+
+    @media (max-width:$mobile){
+        text-align: center;
+    }
+}
+
+.page-h2 {
     font-size: toRem(40);
     font-weight: 500;
-    background-color: $greenColor;
+    line-height: toRem(51);
 
     @media (max-width:$mobile){
         font-size: toRem(36);
-        text-align: center;
     }
 }
 
-.page-text {
+.page-h3 {
+    font-size: toRem(30);
+    font-weight: 500;
+    line-height: toRem(38);
+
+    @media (max-width:$mobile){
+        font-size: toRem(26);
+        line-height: toRem(33);
+    }
+}
+
+.page-p {
     font-size: toRem(18);
     font-weight: 400;
+    line-height: toRem(23);
 
     @media (max-width:$mobile){
         font-size: toRem(16);
-        text-align: center;
-    }
-}
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: toRem(50);
-    border: solid toRem(1) $darkColor;
-    border-radius: toRem(45);
-    min-height: toRem(310);
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-        justify-content: space-between;
-    }
-
-    &__content-title {
-        font-size: toRem(30);
-        font-weight: 500;
-        border-radius: toRem(7);
-
-         &--white {
-        background-color: #fff;
-    }
-
-        &--green {
-            background-color: $greenColor;
-        }
-    }
-
-    &__content-more {
-        display: flex;
-        align-items: center;
-        column-gap: toRem(15);
-    }
-
-    &__content-text {
-        @media (max-width:$mobile){
-            display: none;
-        }
     }
 }

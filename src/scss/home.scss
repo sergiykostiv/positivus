@@ -1,0 +1,88 @@
+//====================================================================================================
+// Hero section
+
+.hero {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+     &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: toRem(530);
+        row-gap: toRem(30);
+
+        @media (max-width:$tablet){
+            max-width: none;
+            row-gap: toRem(20);
+        }
+    }
+
+    &__content-title {
+        font-size: toRem(60);
+        font-weight: 500;
+
+        @media (max-width:$tablet){
+            h1 {
+            padding-bottom: toRem(10);
+            }
+        }
+
+        @media (max-width:$mobile){
+            font-size: toRem(48); 
+        }
+    }
+
+    &__icon {
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    &__content-button {
+        align-self: flex-start;
+
+        @media (max-width:$mobile){
+            margin-top: toRem(20);
+            justify-content: center;
+            width: 100%;
+        }
+    }   
+}
+
+// Company section 
+
+.company {
+    padding-top: toRem(70);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: toRem(30);
+        column-gap: toRem(50);
+
+        @media (max-width:$tablet){
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        img {
+            transition: filter 0.3s;
+            filter: grayscale(1);
+
+            @media (any-hover: hover) {
+                &:hover{
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+
+
+//====================================================================================================

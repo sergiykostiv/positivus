@@ -1,0 +1,74 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: toRem(20) toRem(35);
+	border-radius: toRem(14);
+	font-size: toRem(20);
+	line-height: toRem(28);
+	transition: all .3s;
+	color: #000;
+
+	
+	
+	&--black {
+		background-color: $darkColor;
+		border: solid toRem(1) $darkColor;
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				color: #000;
+				transform: translateY(toRem(-5));
+				box-shadow: 0 toRem(7) 0 #000;
+			}
+		}
+
+		&:active {
+			transform: translateY(toRem(-1));
+			box-shadow: 0 0 0 #000;
+		}
+	}
+
+	&--transparent {
+		border: solid toRem(1) $darkColor;
+		
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $darkColor;
+				color: #fff;
+				transform: translateY(toRem(-5));
+				box-shadow: 0 toRem(7) 0 #888;
+			}
+		}
+
+		&:active {
+			transform: translateY(toRem(-1));
+			box-shadow: 0 0 0 #888;
+		}
+	}
+
+	&--green {
+		border: solid toRem(1) $greenColor;
+		background-color: $greenColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				transform: translateY(toRem(-5));
+				box-shadow: 0 toRem(7) 0 $greenColor;
+			}
+		}
+
+		&:active {
+			transform: translateY(toRem(-1));
+			box-shadow: 0 0 0 #333;
+		}
+	}
+}
+
+
+// border: solid toRem(1) $darkColor;

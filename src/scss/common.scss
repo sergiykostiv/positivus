@@ -50,6 +50,17 @@
     }
 }
 
+.page-h4 {
+    font-size: toRem(20);
+    font-weight: 500;
+    line-height: toRem(38.3);
+
+    @media (max-width:$mobile){
+        font-size: toRem(18);
+        line-height: toRem(23);
+    }
+}
+
 .page-p {
     font-size: toRem(18);
     font-weight: 400;

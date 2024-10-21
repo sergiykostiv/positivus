@@ -231,12 +231,16 @@
 // Trial section 
 
 .trial {
-    margin-bottom: toRem(100);
 
     &__wrapper {
         background-color: $greyColor;
         padding: toRem(60);
         border-radius: toRem(45);
+        position: relative;
+
+        @media (max-width:$mobile){
+            padding: toRem(50); 
+        }
     }
 
     &__content {
@@ -263,14 +267,18 @@
         }
 
         @media (max-width:$tablet){
-            display: none; 
+            display: none;
         }
     }
 
     &__content-btn {
         align-self: start;
+
+        @media (max-width:$mobile){
+            align-self: center;
+            // width: 100%;
+        }
     }
 }
-
 
 //====================================================================================================

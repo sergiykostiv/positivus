@@ -6,11 +6,6 @@
     align-items: flex-start;
     column-gap: toRem(40);
     row-gap: toRem(30);
-    width: 70%;
-
-    @media (max-width:$tablet){
-        width: 100%;
-    }
 
     @media (max-width:$mobile) {
         padding: toRem(60) 0 toRem(40);
@@ -26,6 +21,14 @@
 
     @media (max-width:$mobile){
         text-align: center;
+    }
+}
+
+.page-text {
+    width: toRem(580);
+
+    @media (max-width:$tablet){
+        width: 100%;
     }
 }
 

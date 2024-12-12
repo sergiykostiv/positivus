@@ -4,27 +4,39 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
+	gap: 30px;
 }
 // Спойлер
 .spollers__item {
 	font-size: toRem(20);
+	// background: $greenColor;
+	border-radius: toRem(45);
+	border: 1px solid #000;
+	padding: toRem(41) toRem(60);	
 }
 // Заголовок спойлера
 .spollers__title {
+	font-family: SpaceGrotesk;
+	display: flex;
+	align-items: center;
+	column-gap: toRem(25);
+	font-size: toRem(30);
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
 	position: relative;
 	list-style: none;
+
+	&-num {
+		font-size: toRem(60);
+	}
+
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
 	._spoller-init & {
+
 		cursor: pointer;
 		&::before,
 		&::after {
@@ -33,22 +45,21 @@
 			right: 10px;
 			top: 50%;
 			background-color: #000;
-			height: 2px;
-			width: 15px;
+			height: 6px;
+			width: 18px;
 			transition: transform 0.5s ease 0s;
 		}
 		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
+			transform: translate(0%, -50%);
 		}
+		
 		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
+			transform: translate(0, -50%) rotate(-90deg);
 		}
+
 		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
 			&::after {
-				transform: rotate(40deg);
+				display: none;
 			}
 		}
 		/*
@@ -88,7 +99,7 @@
 }
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	padding-top: toRem(30);
+	margin-top: toRem(30);
+	border-top: solid 1px #000;
 }

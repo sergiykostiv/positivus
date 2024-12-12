@@ -281,4 +281,79 @@
     }
 }
 
+// Case section 
+
+.case {
+    
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        background-color: $darkColor;
+        padding: toRem(70) toRem(60);
+        border-radius: toRem(45);
+
+        @media (max-width:$mobile){
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+
+    &__item {
+        padding: 0 toRem(44);
+
+        &:first-child {
+            padding-left: toRem(0);
+        }
+
+        &:last-child {
+            padding-right: toRem(0);
+        }
+
+        @media (max-width:$mobile){
+            background-color: $darkColor;
+            padding: toRem(42) toRem(50);
+            border-radius: toRem(42);
+
+            &:first-child {
+                padding-left: toRem(50);
+            }
+
+            &:last-child {
+                padding-right: toRem(50);
+            }
+        }
+
+        &:not(:last-child) {
+            border-right: solid 1px #fff;
+
+            @media (max-width:$mobile){
+                border: none; 
+            }
+        }
+    }
+
+    &__item-text {
+        color: #fff;
+        margin-bottom: toRem(20);
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(15);
+        color: $greenColor;
+        transition: column-gap .3s;
+
+        &:hover {
+            column-gap: toRem(20);
+        }
+    }
+}
+
+.process {
+    
+}
+
 //====================================================================================================
